@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+MENSAGEM=""
+
+read -p "Digite um numero: " NUMERO
+
+if [ $NUMERO -ge 15 ]
+then
+    MENSAGEM="O número digitado é maior do que 15"
+        if [ $(($NUMERO % 2)) -eq 0 ]
+        then
+            MENSAGEM="${MENSAGEM} é par"
+	else
+            MENSAGEM="${MENSAGEM} é impar"
+	fi
+   echo "$MENSAGEM"
+else
+   echo "$O número digitado é menor do que 15!"	
+fi

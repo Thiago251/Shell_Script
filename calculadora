@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+declare -a ARRAY
+
+read -p "Digite uma operação (+, -, /, *, % ): " ARRAY[0]
+read -p "Digite o valor: " ARRAY[1]
+read -p "Digite o segundo valor: " ARRAY[2]
+
+RESULTADO=$(echo "scale=2;${ARRAY[1]} ${ARRAY[0]} ${ARRAY[2]}" | bc -l )
+#scale eo comando para casa decimais e o numero depois do igual é a quantidade de casas decimais
+echo "${ARRAY[1]} ${ARRAY[0]} ${ARRAY[2]}: $RESULTADO"

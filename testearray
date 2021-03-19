@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+#EXIBINDO VALORES DE UM ARRAY
+
+USUARIOS=("root" "admim" "administrador" "user")
+
+echo "${USUARIOS[@]1}"
+
+#voce pode fazer manipular os caracteres por dentro do cochetes ou dentro da chave depois do cochete
+
+echo "${#USUARIOS[@]}" # conta quantos caracteres tem no array
+echo "${#USUARIOS[0]}" # A mesma coisa na contagem, essa é ms uma forma.
+echo "${USUARIOS[@]//a/c}" #Substitui as letras do caracteres
+
+unset USUARIOS[0] #Remove o item  do array indice o
+unset USUARIOS #Remove todo o array
+
+
+
+

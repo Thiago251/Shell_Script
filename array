@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+#DECLARAÇÃO INDIRETA
+
+ARRAY [0]="valor1"
+
+#DECLARAÇAO EXPLICITA
+
+DECLARE -a ARRAY2
+
+ARRAY[1]="valor1"
+
+#DECLARAÇÃO COMPOSTA
+
+ARRAY3=("valor1" "valor2" 4 5 $(cat usuarios.txt))
